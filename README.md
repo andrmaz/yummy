@@ -25,7 +25,7 @@ $ npm start
 
 ## Illustrations
 
-<img src="./client/public/yummy.png" alt="app" width="600" height="600"/>
+<img src="./public/yummy.png" alt="app" width="600" height="600"/>
 
 ## Features
 Edamam's Recipe Search API lets you integrate recipes and faceted recipe search into your websites or mobile applications.
