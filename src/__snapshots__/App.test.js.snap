@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should render Component correctly 1`] = `
+<Container
+  h="100vh"
+  maxW="1200px"
+  mb="10vh"
+>
+  <Header />
+  <SearchInputs
+    onSearch={[Function]}
+  />
+  <Memo(ListItems)
+    results={null}
+  />
+</Container>
+`;

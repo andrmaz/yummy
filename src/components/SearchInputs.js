@@ -19,7 +19,7 @@ import '../config';
 const app_id = process.env.REACT_APP_ID;
 const app_key = process.env.REACT_APP_KEY;
 
-const SearchInput = ({ handleChange }) => {
+const SearchInputs = ({ onSearch }) => {
 
     // To manage color mode chakra exposes the useColorMode
     const { colorMode } = useColorMode();
@@ -35,24 +35,24 @@ const SearchInput = ({ handleChange }) => {
         }
     });
 
+    // Check on props change
     const { input, to, diet, health }  = watch();
 
-    const onSubmit = async(e) => {
-        e.preventDefault();
+    const onSubmit = async() => {
         try {
-            const uri = `https://api.edamam.com/search?q=${input}&app_id=${app_id}&app_key=${app_key}&from=0&to=${to}&diet=${diet}&health=${health}`;
-            const response = await fetch(uri, {
+            const options = {
                 method: 'GET',
                 headers: {
+                    'Content-Type': 'application/json',
                     'Content-Encoding': 'gzip',
                     'Cache-Control': 'no-cache'
                 }
-            });
+            };
+            const uri = `https://api.edamam.com/search?q=${input}&app_id=${app_id}&app_key=${app_key}&from=0&to=${to}&diet=${diet}&health=${health}`;
+            const response = await fetch(uri, options);
             const data = await response.json();
-            if (typeof data !== 'string'){
-                handleChange(data);
-            }
-            console.log(data);
+            // if no data match the search request, return an object with count 0
+            onSearch(data);
         } catch (error) {
             throw new Error(error.message);
         }
@@ -64,6 +64,7 @@ const SearchInput = ({ handleChange }) => {
                 <InputGroup size='md'>
                     <Controller
                         name="input"
+                        data-testid="a"
                         control={control}
                         rules={{ required: true }}
                         defaultValue=""
@@ -85,6 +86,7 @@ const SearchInput = ({ handleChange }) => {
                     />
                     <InputRightElement width='4.5rem'>
                         <Button 
+                            id='button'
                             h='1.75rem' 
                             size='sm'
                             variant='solid'
@@ -102,6 +104,7 @@ const SearchInput = ({ handleChange }) => {
                 <Flex justify='space-around' align='center'>
                     <Controller
                         name="to"
+                        data-testid='b'
                         control={control}
                         defaultValue={4}
                         render={({ onChange, value }) => 
@@ -124,6 +127,7 @@ const SearchInput = ({ handleChange }) => {
                     />
                     <Controller
                         name="diet"
+                        data-testid='c'
                         control={control}
                         defaultValue='balanced'
                         render={({ onChange, value }) => 
@@ -146,6 +150,7 @@ const SearchInput = ({ handleChange }) => {
                     />
                     <Controller
                         name="health"
+                        data-testid='d'
                         control={control}
                         defaultValue='tree-nut-free'
                         render={({ onChange, value }) => 
@@ -170,8 +175,8 @@ const SearchInput = ({ handleChange }) => {
     );
 };
 
-SearchInput.propTypes = {
-    handleChange: PropTypes.func,
+SearchInputs.propTypes = {
+    onSearch: PropTypes.func,
 };
 
-export default SearchInput;
+export default SearchInputs;

@@ -8,25 +8,24 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      results : null,
-    };
+    this.onSearch = this.onSearch.bind(this);
+    this.state = { results : null };
   }
 
-  handleChange(data) {
+  onSearch(data) {
     this.setState({ results: data });
   };
 
   render(){
+    const { results } = this.state;
     return (
       <Container h='100vh' maxW='1200px' mb='10vh'>
         <Header />
         <SearchInput 
-          handleChange={this.handleChange}
+          onSearch={this.onSearch}
         />
         <ListItems 
-          results={this.state.results}
+          results={results}
         />
       </Container>
     );

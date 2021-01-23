@@ -9,7 +9,7 @@ function Header() {
     return (
         <Heading d='flex' justifyContent='space-between' pt='10px'>
           {/* Switch light and dark mode */}
-          <Button onClick={toggleColorMode} >
+          <Button data-testid="toggle" onClick={toggleColorMode} >
             Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
           </Button>
           <Icon as={FaUserCircle} />

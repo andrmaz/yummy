@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardItem Component should render Component correctly 1`] = `
+<Box
+  bgColor="unset"
+  borderRadius="lg"
+  borderWidth="1px"
+  overflow="hidden"
+>
+  <Image
+    alt="Recipe"
+    m="auto"
+    src="/"
+  />
+  <Box
+    p="6"
+  >
+    <Box
+      alignItems="baseline"
+      d="flex"
+    >
+      <Badge
+        borderRadius="full"
+        colorScheme="teal"
+        px="2"
+      >
+        label
+      </Badge>
+      <Box
+        color="gray.500"
+        fontSize="xs"
+        fontWeight="semibold"
+        letterSpacing="wide"
+        ml="2"
+        textTransform="uppercase"
+      >
+         minutes • 
+        1
+         cal
+      </Box>
+    </Box>
+    <Box
+      as="h4"
+      fontWeight="semibold"
+      isTruncated={true}
+      lineHeight="tight"
+      mt="1"
+    >
+      label
+    </Box>
+    <List>
+      <ListItem
+        key="0"
+      >
+        ingredient
+      </ListItem>
+    </List>
+  </Box>
+</Box>
+`;

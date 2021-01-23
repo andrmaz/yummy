@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItems Component should render Component correctly 1`] = `
+<Suspense
+  fallback={
+    <Spinner
+      color="blue.500"
+      emptyColor="gray.200"
+      label="Loading"
+      left="50%"
+      pos="absolute"
+      size="xl"
+      speed="0.65s"
+      thickness="4px"
+      top="50%"
+    />
+  }
+  results={
+    Object {
+      "count": 2,
+      "hits": Array [
+        Object {},
+        Object {},
+      ],
+    }
+  }
+>
+  <SimpleGrid
+    minChildWidth="300px"
+    spacing="5px"
+  >
+    <lazy
+      key="0"
+    />
+    <lazy
+      key="1"
+    />
+  </SimpleGrid>
+</Suspense>
+`;

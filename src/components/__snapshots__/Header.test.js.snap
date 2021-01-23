@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render Component correctly 1`] = `
+<Heading
+  d="flex"
+  justifyContent="space-between"
+  pt="10px"
+>
+  <Button
+    data-testid="toggle"
+  >
+    Toggle 
+    Light
+  </Button>
+  <Icon
+    as={[Function]}
+  />
+</Heading>
+`;

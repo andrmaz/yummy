@@ -5,7 +5,7 @@ import { SimpleGrid, Alert, AlertIcon, Spinner } from '@chakra-ui/react';
 const CardItem = lazy(() => import('./CardItem'));
 
 // Check on props change
-function areEqual(prevProps, nextProps){
+export function areEqual(prevProps, nextProps){
     if (prevProps === nextProps) {
         return true;
     } else {

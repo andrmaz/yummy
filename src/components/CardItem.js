@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Box, Image, Badge, List, ListItem, useColorMode } from '@chakra-ui/react';
 
 // Check on props change
-function areEqual(prevProps, nextProps){
+export function areEqual(prevProps, nextProps){
     if (prevProps === nextProps) {
         return true;
     } else {
