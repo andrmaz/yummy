@@ -31,5 +31,5 @@ $ npm start
 Edamam's Recipe Search API lets you integrate recipes and faceted recipe search into your websites or mobile applications.
 
 ## Credits
-See more at https://developer.edamam.com/
+https://developer.edamam.com/
 
