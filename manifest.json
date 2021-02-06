@@ -3,8 +3,8 @@
   "name": "Edamam Recipe Search Application",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "48x48",
+      "src": "favicon-32x32",
+      "sizes": "32x32",
       "type": "image/x-icon"
     },
     {
