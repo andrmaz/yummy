@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectDiet Component should render Component correctly 1`] = `
+<Controller
+  data-testid="c"
+  defaultValue="balanced"
+  name="diet"
+  render={[Function]}
+/>
+`;

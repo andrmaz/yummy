@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container} from '@chakra-ui/react';
 import Header from './components/Header';
-import SearchInput from './components/SearchInputs';
+import FormFields from './components/FormFields';
 import ListItems from './components/ListItems';
 import './App.css';
 
@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <Container h='100vh' maxW='1200px' mb='10vh'>
         <Header />
-        <SearchInput 
+        <FormFields
           onSearch={this.onSearch}
         />
         <ListItems 

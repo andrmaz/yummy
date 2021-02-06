@@ -17,7 +17,7 @@ const CardItem = ({ recipe }) => {
     const { colorMode } = useColorMode();
 
     return (
-        <Box borderWidth="1px" borderRadius="lg" overflow="hidden" bgColor={colorMode === 'light' ? 'lightblue' : 'unset'}>
+        <Box borderWidth="1px" borderRadius="lg" overflow="hidden" bgColor={colorMode === 'light' ? 'royalblue' : 'unset'}>
             <Image src={recipe.image} alt='Recipe' m='auto' />
 
             <Box p="6">

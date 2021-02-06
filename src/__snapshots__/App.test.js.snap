@@ -7,7 +7,7 @@ exports[`App Component should render Component correctly 1`] = `
   mb="10vh"
 >
   <Header />
-  <SearchInputs
+  <FormFields
     onSearch={[Function]}
   />
   <Memo(ListItems)

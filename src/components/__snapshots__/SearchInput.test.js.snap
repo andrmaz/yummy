@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput Component should render Component correctly 1`] = `
+<Controller
+  data-testid="a"
+  defaultValue=""
+  name="input"
+  render={[Function]}
+  rules={
+    Object {
+      "required": true,
+    }
+  }
+/>
+`;

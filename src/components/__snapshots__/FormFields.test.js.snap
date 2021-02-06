@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchInput Component should render Component correctly 1`] = `
+exports[`FormFields Component should render Component correctly 1`] = `
 <Center
   color="white"
   h="20vh"
@@ -9,12 +9,13 @@ exports[`SearchInput Component should render Component correctly 1`] = `
   minW="300px"
 >
   <FormControl
+    isRequired="true"
     onSubmit={[Function]}
   >
     <InputGroup
       size="md"
     >
-      <Controller
+      <SearchInput
         control={
           Object {
             "defaultValuesRef": Object {
@@ -121,15 +122,7 @@ exports[`SearchInput Component should render Component correctly 1`] = `
             "watchInternal": [Function],
           }
         }
-        data-testid="a"
-        defaultValue=""
-        name="input"
-        render={[Function]}
-        rules={
-          Object {
-            "required": true,
-          }
-        }
+        errors={Object {}}
       />
       <InputRightElement
         width="4.5rem"
@@ -147,18 +140,10 @@ exports[`SearchInput Component should render Component correctly 1`] = `
         </Button>
       </InputRightElement>
     </InputGroup>
-    <FormHelperText
-      fontStyle="oblique"
-      mb="0.5rem"
-      textAlign="center"
-    >
-      Select the number of recipies, the diet and the type of meal
-    </FormHelperText>
     <Flex
-      align="center"
       justify="space-around"
     >
-      <Controller
+      <SelectRecipes
         control={
           Object {
             "defaultValuesRef": Object {
@@ -265,12 +250,8 @@ exports[`SearchInput Component should render Component correctly 1`] = `
             "watchInternal": [Function],
           }
         }
-        data-testid="b"
-        defaultValue={4}
-        name="to"
-        render={[Function]}
       />
-      <Controller
+      <SelectDiet
         control={
           Object {
             "defaultValuesRef": Object {
@@ -377,12 +358,8 @@ exports[`SearchInput Component should render Component correctly 1`] = `
             "watchInternal": [Function],
           }
         }
-        data-testid="c"
-        defaultValue="balanced"
-        name="diet"
-        render={[Function]}
       />
-      <Controller
+      <SelectHealth
         control={
           Object {
             "defaultValuesRef": Object {
@@ -489,10 +466,6 @@ exports[`SearchInput Component should render Component correctly 1`] = `
             "watchInternal": [Function],
           }
         }
-        data-testid="d"
-        defaultValue="tree-nut-free"
-        name="health"
-        render={[Function]}
       />
     </Flex>
   </FormControl>
