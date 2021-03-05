@@ -38,8 +38,8 @@ const ListItems = ({ results }) => (
                 </Alert> :
                 (
                     results?.count > 0 ?
-                    results.hits.map(({recipe}, index) => (
-                        <CardItem key={index} recipe={recipe} />
+                    results.hits.map(({recipe}) => (
+                        <CardItem key={recipe.label} recipe={recipe} />
                     )) : 
                     <Alert status="warning">
                         <AlertIcon />
